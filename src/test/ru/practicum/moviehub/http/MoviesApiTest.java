@@ -200,7 +200,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    public void GetMovieById_whenMovieExists_returnsMovie() throws Exception {
+    public void getMovieById_whenMovieExists_returnsMovie() throws Exception {
         Movie addedMovie = store.add(new Movie("Бойцовский клуб", 1999));
         int movieId = addedMovie.getId();
 
