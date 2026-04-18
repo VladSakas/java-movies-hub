@@ -73,8 +73,6 @@ public class MoviesApiTest {
         String body = response.body().trim();
         assertTrue(body.startsWith("[") && body.endsWith("]"),
                 "Ожидается JSON-массив");
-
-
     }
 
     @Test
@@ -218,7 +216,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    public void GetMovieById_whenMovieDoesNotExist_returns404() throws Exception {
+    public void getMovieById_whenMovieDoesNotExist_returns404() throws Exception {
         int noExistId = 9999;
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(BASE + "/movies/" + noExistId))
