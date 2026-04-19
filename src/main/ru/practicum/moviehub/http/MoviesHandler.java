@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-class MoviesHandler extends BaseHttpHandler {
+public class MoviesHandler extends BaseHttpHandler {
     private final Gson gson = new GsonBuilder().create();
     private final MoviesStore store;
 

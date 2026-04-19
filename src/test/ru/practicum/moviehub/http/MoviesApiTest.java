@@ -279,7 +279,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    void deleteMovieById_whenIdNotNumber_returns400() throws Exception {
+    public void deleteMovieById_whenIdNotNumber_returns400() throws Exception {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(BASE + "/movies/abc"))
                 .DELETE()
@@ -293,7 +293,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    void getMoviesByYear_whenMoviesExist_returnsFilteredMovies() throws Exception {
+    public void getMoviesByYear_whenMoviesExist_returnsFilteredMovies() throws Exception {
         store.add(new Movie("Бойцовский клуб", 1999));
         store.add(new Movie("Пираты Карибского Моря", 2003));
         store.add(new Movie("Очень Страшное Кино 3", 2003));
@@ -316,7 +316,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    void getMoviesByYear_whenNoMovies_returnsEmptyArray() throws Exception {
+    public void getMoviesByYear_whenNoMovies_returnsEmptyArray() throws Exception {
         store.add(new Movie("Бойцовский клуб", 1999));
         store.add(new Movie("Пираты Карибского Моря", 2003));
         store.add(new Movie("Очень Страшное Кино 3", 2003));
@@ -336,7 +336,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    void getMoviesByYear_whenYearNotNumber_returns400() throws Exception {
+    public void getMoviesByYear_whenYearNotNumber_returns400() throws Exception {
         store.add(new Movie("Бойцовский клуб", 1999));
         store.add(new Movie("Пираты Карибского Моря", 2003));
         store.add(new Movie("Очень Страшное Кино 3", 2003));
@@ -354,7 +354,7 @@ public class MoviesApiTest {
     }
 
     @Test
-    void whenUnsupportedMethod_returns405() throws Exception {
+    public void whenUnsupportedMethod_returns405() throws Exception {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(BASE + "/movies"))
                 .method("PUT", HttpRequest.BodyPublishers.noBody())

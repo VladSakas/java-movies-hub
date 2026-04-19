@@ -11,8 +11,8 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-abstract class BaseHttpHandler implements HttpHandler {
-    protected static final String CT_JSON = "application/json; charset=UTF-8"; // !!! Укажите содержимое заголовка Content-Type
+public abstract class BaseHttpHandler implements HttpHandler {
+    protected static final String CT_JSON = "application/json; charset=UTF-8";
     protected final Gson gson = new GsonBuilder().create();
 
     protected void sendJson(HttpExchange ex, int status, String json) throws IOException {
