@@ -27,7 +27,7 @@ public class MoviesApiTest {
     private static Gson gson;
 
     @BeforeAll
-    static void beforeAll() {
+    public static void beforeAll() {
         if (server == null) {
             store = new MoviesStore();
             server = new MoviesServer(store);
@@ -40,7 +40,7 @@ public class MoviesApiTest {
     }
 
     @AfterAll
-    static void afterAll() {
+    public static void afterAll() {
         if (server != null) {
             server.stop();
             server = null;
@@ -48,7 +48,7 @@ public class MoviesApiTest {
     }
 
     @BeforeEach
-    void beforeEach() {
+    public void beforeEach() {
         store.clear();
     }
 
