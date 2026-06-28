@@ -27,3 +27,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# IDE
+.idea/
+*.iml
+
+# GitHub workflows (если не нужны)
+.github/
+
+# Libraries (если lib — это внешние jar)
+lib/
